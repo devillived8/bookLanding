@@ -1,4 +1,5 @@
-import Burger from "../burger/Burger"
+import Burger from "../burger/Burger";
+
 
 interface IHeaderProps {
   openMenu: () => void;

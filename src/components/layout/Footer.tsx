@@ -7,7 +7,7 @@ export const Footer = () => {
   const TgIcon = tgIcon;
 
   return (
-    <footer className="flex justify-end bg-black/40 p-4">
+    <footer className="flex justify-end bg-black/40 p-4 md:col-span-full">
       <ul className='flex gap-2'>
         <li>
           <a

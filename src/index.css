@@ -20,6 +20,7 @@
     --color-accent-red: oklch(57.7% 0.245 27.325);
     --color-accent-white: oklch(97.1% 0.013 17.38);
     --color-text-muted: oklch(86.8% 0.007 39.5);
+    --color-border-main: oklch(37.2% 0.044 257.287);
 }
 
 @layer base {

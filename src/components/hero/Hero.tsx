@@ -4,13 +4,13 @@ import grungeMask from '../../assets/img/grunge-mask-alpha.png';
 const Hero = () => {
   return (
     <div
-      className="relative flex min-h-[300px] flex-col bg-cover bg-right bg-no-repeat p-4 md:min-h-[500px] md:bg-top md:p-8 lg:p-12"
+      className="relative flex min-h-75 flex-col bg-cover bg-right bg-no-repeat border-b border-border-main p-4 md:min-h-125 md:bg-top md:p-8 lg:p-12"
       style={{ backgroundImage: `url(${bannerBg})` }}
     >
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-      <div className="relative z-10 flex flex-1 flex-col items-start justify-center">
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+      <div className="relative z-1 flex flex-1 flex-col items-start justify-center">
         <h1
-          className="font-display text-accent-red text-4xl leading-tight md:text-6xl lg:text-7xl"
+          className="font-display text-accent-red text-4xl leading-tight md:text-6xl lg:text-7xl text-shadow-accent-red text-shadow-md"
           style={{
             WebkitMaskImage: `url(${grungeMask})`,
             maskImage: `url(${grungeMask})`,

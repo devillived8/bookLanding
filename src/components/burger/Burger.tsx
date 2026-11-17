@@ -1,13 +1,13 @@
 interface IBurgerProps {
-  openMenu: () => void;
+  toggleMenu: () => void;
   isMenuOpen: boolean;
 }
 
-const Burger = ({ openMenu, isMenuOpen }: IBurgerProps) => {
+const Burger = ({ toggleMenu, isMenuOpen }: IBurgerProps) => {
   return (
     <button
-      onClick={openMenu}
-      className="relative min-h-8 min-w-10 cursor-pointer"
+      onClick={toggleMenu}
+      className="relative min-h-6 min-w-10 cursor-pointer md:hidden"
       aria-label="Меню"
     >
       <span

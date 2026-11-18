@@ -1,4 +1,6 @@
+
 @import 'tailwindcss';
+
 @font-face {
   font-family: 'Russo';
   src: url('/fonts/Russo_One/RussoOne-Regular.ttf') format('truetype');
@@ -36,3 +38,4 @@
     background-attachment: fixed;
   }
 }
+

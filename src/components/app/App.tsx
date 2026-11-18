@@ -5,6 +5,7 @@ import MobileMenu from '../layout/MobileMenu';
 import Overlay from '../overlay/Overlay';
 import InfoSection from '../layout/InfoSection';
 import AboutBookSection from '../layout/AboutBookSection';
+import Characters from '../layout/Characters';
 
 const App = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -25,6 +26,7 @@ const App = () => {
         <Hero />
         <InfoSection></InfoSection>
         <AboutBookSection></AboutBookSection>
+        <Characters></Characters>
       </main>
     </>
   );

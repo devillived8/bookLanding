@@ -11,17 +11,17 @@ const MobileMenu = ({isMenuOpen}: IMobileMenuProps) => {
         <nav className=''>
           <ul className="flex flex-col gap-4">
           <li>
-            <a className="hover:text-accent-red block transition-colors" href="">
+            <a className="hover:text-accent-red block transition-colors" href="#AboutBook">
               О книге
             </a>
           </li>
           <li>
-            <a className="hover:text-accent-red block transition-colors" href="">
+            <a className="hover:text-accent-red block transition-colors" href="#AboutAuthor">
               Об авторе
             </a>
           </li>
           <li>
-            <a className="hover:text-accent-red block transition-colors" href="">
+            <a className="hover:text-accent-red block transition-colors" href="#Characters">
               Персонажи
             </a>
           </li>

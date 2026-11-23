@@ -23,6 +23,14 @@
     --color-accent-white: oklch(97.1% 0.013 17.38);
     --color-text-muted: oklch(86.8% 0.007 39.5);
     --color-border-main: oklch(37.2% 0.044 257.287);
+    --color-bg-main: oklch(14.5% 0 0 / 50%);
+    --color-bg-secondary: oklch(20.5% 0 0);
+    --color-bg-surface: oklch(37.1% 0 0);
+ 
+}
+
+@utility neon-border {
+  filter:drop-shadow(0 0 10px #ef4444) drop-shadow(0 10px 35px rgba(239,68,68,0.8));
 }
 
 @layer base {
@@ -36,6 +44,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  * {
+    scroll-behavior: smooth;
   }
 }
 

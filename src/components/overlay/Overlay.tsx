@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { useEffect } from "react";
+import type { ReactNode } from 'react';
+import { useEffect } from 'react';
 
 interface IOverlayProps {
   children?: ReactNode;
@@ -7,9 +7,7 @@ interface IOverlayProps {
   toggleMenu: () => void;
 }
 
-
-
-const Overlay = ({children, isMenuOpen, toggleMenu}: IOverlayProps) => {
+const Overlay = ({ children, isMenuOpen, toggleMenu }: IOverlayProps) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isMenuOpen) {
@@ -27,10 +25,13 @@ const Overlay = ({children, isMenuOpen, toggleMenu}: IOverlayProps) => {
   }, [isMenuOpen, toggleMenu]);
 
   return (
-    <div onClick={toggleMenu} className={`fixed inset-0 bg-black/60 z-20 ${isMenuOpen === false ? 'hidden' : 'block'}`}>
+    <div
+      onClick={toggleMenu}
+      className={`fixed inset-0 z-20 bg-black/60 ${isMenuOpen === false ? 'hidden' : 'block'}`}
+    >
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default Overlay
+export default Overlay;

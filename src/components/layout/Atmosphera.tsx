@@ -10,8 +10,8 @@ const Atmosphera = () => {
   return (
     <Section titleText="Атмосфера">
       <div className="flex flex-col items-center">
-        <div className=" flex w-full flex-wrap justify-center gap-8  ">
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-1 bg-bg-secondary border-border-main rounded-md border p-8">
+        <div className="flex w-full flex-wrap justify-center gap-8">
+          <div className="bg-bg-secondary border-border-main flex flex-col items-center justify-center gap-4 rounded-md border p-8 md:flex-1">
             <iframe
               className="aspect-[363/714] h-auto w-full max-w-[363px] rounded-md"
               src="https://vk.ru/clip_ext.php?oid=438748581&id=456241227&autoplay=1"
@@ -26,7 +26,7 @@ const Atmosphera = () => {
               eos nesciunt illo hic quo illum recusandae possimus.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-1 bg-bg-secondary border-border-main rounded-md border p-8">
+          <div className="bg-bg-secondary border-border-main flex flex-col items-center justify-center gap-4 rounded-md border p-8 md:flex-1">
             <iframe
               className="aspect-[363/714] h-auto w-full max-w-[363px] rounded-md"
               src="https://vk.ru/clip_ext.php?oid=438748581&id=456241201&autoplay=1"

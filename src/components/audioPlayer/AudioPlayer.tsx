@@ -105,7 +105,7 @@ const AudioPlayer = ({ tracks }: IAudioPlayerProps) => {
 
   return (
     <div className="bg-bg-secondary border-border-main mt-8 flex w-full flex-wrap justify-center rounded-md border p-6">
-      <div className='flex gap-2'>
+      <div className="flex gap-2">
         <button onClick={() => goToTrack((index - 1 + tracks.length) % tracks.length)}>⏮</button>
         <button onClick={() => goToTrack((index + 1) % tracks.length)}>⏭</button>
       </div>

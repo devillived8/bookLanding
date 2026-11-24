@@ -33,7 +33,9 @@ const Hero = () => {
         </p>
       </div>
       <div className="relative z-10 self-start">
-        <Button className="self-start"><a href="#WhereFind">Где читать</a></Button>
+        <Button className="self-start">
+          <a href="#WhereFind">Где читать</a>
+        </Button>
       </div>
     </div>
   );

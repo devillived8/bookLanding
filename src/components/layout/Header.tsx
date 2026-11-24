@@ -1,5 +1,5 @@
 import Burger from '../burger/Burger';
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
 
 interface IHeaderProps {
   toggleMenu: () => void;
@@ -8,12 +8,12 @@ interface IHeaderProps {
 
 const Header = ({ toggleMenu, isMenuOpen }: IHeaderProps) => {
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-border-main bg-black p-4">
+    <header className="border-border-main sticky top-0 z-20 flex items-center justify-between border-b bg-black p-4">
       <a href="/">
-        <img src={logo} alt="тут будет логотип" className="h-8 " />
+        <img src={logo} alt="тут будет логотип" className="h-8" />
       </a>
       <nav className="hidden md:block">
-        <ul className="flex divide-x divide-text-muted">
+        <ul className="divide-text-muted flex divide-x">
           <li>
             <a className="hover:text-accent-red block px-4 transition-colors" href="#AboutBook">
               О книге

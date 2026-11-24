@@ -12,23 +12,14 @@ const titleStyles: Record<HeadingLevel, string> = {
   3: 'text-xl font-display font-md',
 };
 
-const Title = ({
-  level = 2,
-  className = '',
-  children,
-  ...props
-}: ITitleProps) => {
-
+const Title = ({ level = 2, className = '', children, ...props }: ITitleProps) => {
   const Tag = `h${level}` as const;
 
   return (
-    <Tag
-      className={`${titleStyles[level]} ${className}`}
-      {...props}
-    >
+    <Tag className={`${titleStyles[level]} ${className}`} {...props}>
       {children}
     </Tag>
   );
 };
 
-export default Title
+export default Title;

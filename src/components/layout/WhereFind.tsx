@@ -8,11 +8,14 @@ import LitnetIcon from '../../assets/img/litner-icon.svg?react';
 const WhereFind = () => {
   return (
     <Section titleText="Где найти книгу" id="WhereFind">
-      <div className='pb-4 flex justify-center'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus ratione doloribus excepturi sunt eligendi aspernatur suscipit optio dignissimos quos.</p>
+      <div className="flex justify-center pb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus ratione doloribus
+          excepturi sunt eligendi aspernatur suscipit optio dignissimos quos.
+        </p>
       </div>
       <div className="flex flex-col justify-center gap-8 md:flex-row">
-        <div className="bg-bg-secondary border border-border-main rounded-md p-4">
+        <div className="bg-bg-secondary border-border-main rounded-md border p-4">
           <Title level={3} className="mb-4 text-center">
             В электронном варианте
           </Title>
@@ -27,7 +30,7 @@ const WhereFind = () => {
             </div>
           </div>
         </div>
-        <div className="bg-bg-secondary border border-border-main rounded-md p-4">
+        <div className="bg-bg-secondary border-border-main rounded-md border p-4">
           <Title level={3} className="mb-4 text-center">
             В печатном варианте
           </Title>

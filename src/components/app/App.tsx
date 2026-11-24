@@ -9,6 +9,7 @@ import Characters from '../layout/Characters';
 import WhereFind from '../layout/WhereFind';
 import Atmosphera from '../layout/Atmosphera';
 import AboutAuthor from '../layout/AboutAuthor';
+import { Footer } from '../layout/Footer';
 
 const App = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -19,22 +20,21 @@ const App = () => {
 
   return (
     <>
-          <div className="pointer-events-none fixed inset-0 bg-black/50 z-10" />
+      <div className="pointer-events-none fixed inset-0 z-10 bg-black/50" />
       <MobileMenu isMenuOpen={menuIsOpen}></MobileMenu>
       <Header toggleMenu={handleToggleMenu} isMenuOpen={menuIsOpen} />
       <Overlay isMenuOpen={menuIsOpen} toggleMenu={handleToggleMenu}></Overlay>
 
-
-
-      <main className='relative z-10'>
+      <main className="relative z-10">
         <Hero />
         <InfoSection></InfoSection>
         <AboutBookSection></AboutBookSection>
-        <Characters></Characters>
         <WhereFind></WhereFind>
+        <Characters></Characters>
         <Atmosphera></Atmosphera>
         <AboutAuthor></AboutAuthor>
       </main>
+      <Footer></Footer>
     </>
   );
 };

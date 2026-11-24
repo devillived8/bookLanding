@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'react-image-and-background-image-fade/styles.css';
 
 @font-face {
   font-family: 'Russo';
@@ -25,6 +26,35 @@
   --color-bg-main: oklch(14.5% 0 0 / 50%);
   --color-bg-secondary: oklch(20.5% 0 0);
   --color-bg-surface: oklch(37.1% 0 0);
+  --animate-loader: loader 1.5s ease-in-out infinite;
+
+  @keyframes loader {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    50% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(300%);
+    }
+  }
+
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.6;
+      text-shadow: 0 0 5px rgb(220 38 38 / 30%);
+    }
+
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 15px rgb(220 38 38 / 80%);
+    }
+  }
 }
 
 @utility neon-border {
@@ -46,5 +76,47 @@
 
   * {
     scroll-behavior: smooth;
+  }
+
+  /* Фон контейнера (если хотите переопределить bg-bg-secondary) */
+.rhap_container {
+  background-color: var(--color-bg-secondary); /* или ваш цвет */
+  box-shadow: none; /* убираем тень по умолчанию, если мешает */
+}
+
+/* Цвет полосы прогресса и точки-ползунка */
+.rhap_progress-filled,
+.rhap_progress-indicator {
+  background-color: var(--color-accent-red) !important;
+}
+
+.rhap_theme-color{
+  background-color: var(--color-accent-red) !important;
+}
+
+.rhap_background-color {
+  background-color: var(--color-accent-red) !important;
+}
+/* Цвет иконок кнопок (play, next, previous и т.д.) */
+.rhap_main-controls-button svg {
+  color: var(--color-accent-red) !important;
+}
+
+/* Цвет времени (текущее / общее) */
+.rhap_time {
+  color: var(--color-text-muted) !important;
+}
+
+/* Цвет громкости */
+.rhap_volume-bar,
+.rhap_volume-indicator {
+  background-color: var(--color-accent-red) !important;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-loader,
+  .animate-pulse-glow {
+    animation: none;
   }
 }

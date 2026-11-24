@@ -1,11 +1,13 @@
 import AudioPlayer from '../audioPlayer/AudioPlayer';
 import Section from '../section/Section';
 
-const Atmosphera = () => {
   const tracks = [
     { id: 1, src: '/tracks/samoypravlenit.mp3', title: 'трек 1' },
     { id: 2, src: '/tracks/plana-net.mp3', title: 'трек 2' },
   ];
+
+const Atmosphera = () => {
+
 
   return (
     <Section titleText="Атмосфера">
@@ -42,8 +44,12 @@ const Atmosphera = () => {
             </p>
           </div>
         </div>
+        <div className='mt-8'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatem deserunt dolor consequatur debitis ipsum quae, odio vel nisi ad.</p>
+             <AudioPlayer tracks={tracks}></AudioPlayer>
+        </div>
+     
 
-        <AudioPlayer tracks={tracks}></AudioPlayer>
       </div>
     </Section>
   );

@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Title from '../title/Title';
+import { Image } from 'react-image-and-background-image-fade';
 
 interface ISliderItem {
   id: string;
@@ -42,11 +43,16 @@ const Slider = ({ sliderItems }: ISliderProps) => {
       {sliderItems.map((item) => (
         <SwiperSlide key={item.id} className="pb-10">
           <div>
-            <img
-              src={item.img}
-              loading="lazy"
-              alt={item.alt}
-              className="max-h-120 w-full object-cover object-top"
+            <Image
+            src={item.img}
+            alt={item.alt ?? item.title}
+            width= '100%'
+            height= 'auto'
+            placeholder="skeleton"
+            fadeType="zoom-blur"
+            fit="cover"
+            position="top"
+            className="max-h-120 w-full"
             />
             <Title level={3} className="p-4 pb-0 text-center">
               {item.title}

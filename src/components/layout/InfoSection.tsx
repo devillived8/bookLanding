@@ -3,6 +3,7 @@ import Button from '../button/Button';
 import Section from '../section/Section';
 import Slider from '../slider/Slider';
 import Title from '../title/Title';
+import { Image } from 'react-image-and-background-image-fade';
 
 const sliderItems = [
   {
@@ -34,11 +35,19 @@ const InfoSection = () => {
           </Title>
           <div className="flex flex-col items-center gap-4 p-4 pt-0 sm:flex-row sm:items-start">
             <div className="border-border-main flex-1 rounded-md border">
-              <img
+              <Image
+                src={Crow}
+                alt="Ворона"
+                fit="cover"
+                placeholder="skeleton"
+                fadeType="zoom-blur"
+                className="w-full max-w-full shrink-0 rounded-md"
+              />
+              {/* <img
                 src={Crow}
                 alt="Ворона"
                 className="w-full max-w-full shrink-0 rounded-md object-cover"
-              />
+              /> */}
             </div>
             <p className="min-w-0 flex-1 hyphens-auto sm:text-left">
               Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов
@@ -58,10 +67,13 @@ const InfoSection = () => {
           </Title>
           <div className="flex flex-col items-center gap-4 p-4 pt-0 sm:flex-row sm:items-start">
             <div className="border-border-main flex-1 rounded-md border">
-              <img
+               <Image
                 src={Crow}
                 alt="Ворона"
-                className="w-full max-w-full shrink-0 rounded-md object-cover"
+                fit="cover"
+                placeholder="skeleton"
+                fadeType="zoom-blur"
+                className="w-full max-w-full shrink-0 rounded-md"
               />
             </div>
             <p className="min-w-0 flex-1 hyphens-auto sm:text-left">

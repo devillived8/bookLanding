@@ -3,6 +3,7 @@ import author from '../../assets/img/author.jpg';
 import VkIcon from '../../assets/img/vk-icon.svg?react';
 import TgIcon from '../../assets/img/tg-icon.svg?react';
 import GroupIcon from '../../assets/img/group-icon.svg?react';
+import { Image } from 'react-image-and-background-image-fade';
 
 const AboutAuthor = () => {
   return (
@@ -43,12 +44,18 @@ const AboutAuthor = () => {
             </ul>
           </div>
         </div>
-
-        <img
-          src={author}
-          alt="Фото автора"
-          className="order-1 w-70 min-w-0 shrink rounded-full object-cover sm:min-w-40"
-        />
+        <div className="order-1 w-60 min-w-0 shrink sm:min-w-40">
+          <Image
+            src={author}
+            height='420'
+            width='280'
+            alt="Фото автора"
+            fit="cover"
+            placeholder="skeleton"
+            fadeType="zoom-blur"
+            className="rounded-full"
+          />
+        </div>
       </div>
     </Section>
   );

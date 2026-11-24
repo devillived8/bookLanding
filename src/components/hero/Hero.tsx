@@ -1,4 +1,4 @@
-import bannerBg from '../../assets/img/banner-img.png';
+import bannerBg from '../../assets/img/banner-img.webp';
 import grungeMask from '../../assets/img/grunge-mask-alpha.png';
 import Button from '../button/Button';
 import Title from '../title/Title';
@@ -6,7 +6,6 @@ import Title from '../title/Title';
 const Hero = () => {
   return (
     <section className="border-border-main relative flex min-h-75 flex-col overflow-hidden border-b p-4 md:min-h-125 md:p-8 lg:p-12">
-
       <img
         src={bannerBg}
         alt=""
@@ -43,8 +42,8 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 self-start">
-        <Button className="self-start">
-          <a href="#WhereFind">Где читать</a>
+        <Button className="self-start" variant="link" href="#WhereFind">
+          Где читать
         </Button>
       </div>
     </section>

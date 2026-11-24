@@ -1,6 +1,6 @@
 import Section from '../section/Section';
-import test from '../../assets/img/test.jpg';
-import test2 from '../../assets/img/test2.jpg';
+import test from '../../assets/img/test.webp';
+import test2 from '../../assets/img/test2.webp';
 import phoneIcon from '../../assets/img/phone-icon.png';
 import manIcon from '../../assets/img/man-icon.png';
 import pizzaIcon from '../../assets/img/pizza-icon.png';
@@ -93,7 +93,7 @@ const AboutBookSection = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex w-full justify-center pr-4 pl-4">
+        <div className="flex w-full justify-center pr-4 pl-4">
           <ul className="bg-bg-secondary border-border-main flex flex-col items-start gap-8 rounded-md border p-8">
             {listItems.map((item) => (
               <li key={item.id} className="flex items-center justify-center gap-4">

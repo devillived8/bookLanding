@@ -1,15 +1,34 @@
 import React from 'react';
 
-type IButtonProps = React.ComponentProps<'button'>;
+type ButtonProps =
+  | (React.ComponentProps<'button'> & {
+      variant?: 'button';
+    })
+  | (React.ComponentProps<'a'> & {
+      variant: 'link';
+    });
 
-const Button = ({ children, className = '', type = 'button', ...props }: IButtonProps) => {
+const Button = (props: ButtonProps) => {
+  const className = `cursor-pointer rounded-md border px-5 py-2 text-base transition-colors hover:bg-white/20 md:px-6 md:py-3 md:text-lg ${props.className ?? ''}`;
+
+  if (props.variant === 'link') {
+    return (
+      <a
+        {...props}
+        className={className}
+      >
+        {props.children}
+      </a>
+    );
+  }
+
   return (
     <button
-      type={type}
-      className={`cursor-pointer rounded-md border px-5 py-2 text-base transition-colors hover:bg-white/20 md:px-6 md:py-3 md:text-lg ${className} `}
       {...props}
+      type={props.type ?? 'button'}
+      className={className}
     >
-      {children}
+      {props.children}
     </button>
   );
 };

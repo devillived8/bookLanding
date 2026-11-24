@@ -10,7 +10,7 @@ const Atmosphera = () => {
 
 
   return (
-    <Section titleText="Атмосфера">
+    <Section titleText="Атмосфера" id='Atmosphera'>
       <div className="flex flex-col items-center">
         <div className="flex w-full flex-wrap justify-center gap-8">
           <div className="bg-bg-secondary border-border-main flex flex-col items-center justify-center gap-4 rounded-md border p-8 md:flex-1">
@@ -22,6 +22,7 @@ const Atmosphera = () => {
               allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
               frameBorder="0"
               allowFullScreen
+              loading='lazy'
             ></iframe>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto, optio sint
@@ -37,6 +38,7 @@ const Atmosphera = () => {
               allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
               frameBorder="0"
               allowFullScreen
+              loading='lazy'
             ></iframe>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tenetur earum esse

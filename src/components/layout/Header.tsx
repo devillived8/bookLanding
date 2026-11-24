@@ -1,5 +1,6 @@
 import Burger from '../burger/Burger';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logo.webp';
+import { navItems } from '../../config/navigation';
 
 interface IHeaderProps {
   toggleMenu: () => void;
@@ -14,26 +15,13 @@ const Header = ({ toggleMenu, isMenuOpen }: IHeaderProps) => {
       </a>
       <nav className="hidden md:block">
         <ul className="divide-text-muted flex divide-x">
-          <li>
-            <a className="hover:text-accent-red block px-4 transition-colors" href="#AboutBook">
-              О книге
-            </a>
-          </li>
-          <li>
-            <a className="hover:text-accent-red block px-4 transition-colors" href="#AboutAuthor">
-              Об авторе
-            </a>
-          </li>
-          <li>
-            <a className="hover:text-accent-red block px-4 transition-colors" href="#Characters">
-              Персонажи
-            </a>
-          </li>
-          <li>
-            <a className="hover:text-accent-red block px-4 transition-colors" href="">
-              Контакты
-            </a>
-          </li>
+          {navItems.map((item) => (
+            <li>
+              <a href={item.href} className="hover:text-accent-red block px-4 transition-colors">
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
       <Burger isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Burger>

@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Title from '../title/Title';
 import { Image } from 'react-image-and-background-image-fade';
+import { type ReactNode } from 'react';
 
 interface ISliderItem {
   id: string;
@@ -12,13 +13,15 @@ interface ISliderItem {
   img: string;
   text: string;
   alt?: string;
+  href?: string;
 }
 
 interface ISliderProps {
   sliderItems: ISliderItem[];
+  children?: (item: ISliderItem) => ReactNode;
 }
 
-const Slider = ({ sliderItems }: ISliderProps) => {
+const Slider = ({ sliderItems, children }: ISliderProps) => {
   return (
     <Swiper
       className="bg-bg-secondary border-border-main max-h-200 rounded-md border"
@@ -58,6 +61,7 @@ const Slider = ({ sliderItems }: ISliderProps) => {
               {item.title}
             </Title>
             <p className="p-4 hyphens-auto">{item.text}</p>
+            {children?.(item)} 
           </div>
         </SwiperSlide>
       ))}

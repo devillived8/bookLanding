@@ -1,4 +1,4 @@
-import Crow from '../../assets/img/img-crow.png';
+import Crow from '../../assets/img/img-crow.webp';
 import Button from '../button/Button';
 import Section from '../section/Section';
 import Slider from '../slider/Slider';
@@ -12,6 +12,7 @@ const sliderItems = [
     img: Crow,
     text: 'Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов однозначно фиксирует необходимость инновационных методов управления процессами.',
     id: 'crow',
+    href: '#AboutBook',
   },
   {
     title: 'Об авторе',
@@ -19,6 +20,7 @@ const sliderItems = [
     img: Crow,
     text: 'Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов однозначно фиксирует необходимость инновационных методов управления процессами.',
     id: 'crow2',
+    href: '#AboutAuthor',
   },
 ];
 
@@ -27,7 +29,15 @@ const InfoSection = () => {
     <Section titleText="Краткая информация" className="relative z-9 mt-4 flex flex-col">
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="md:hidden">
-          <Slider sliderItems={sliderItems} />
+          <Slider sliderItems={sliderItems}>
+            {(item) => (
+              <div className="flex justify-end p-4">
+                <Button variant="link" href={item.href}>
+                  Узнать подробнее
+                </Button>
+              </div>
+            )}
+          </Slider>
         </div>
         <div className="border-border-main bg-bg-secondary hidden flex-1 rounded-md border md:block">
           <Title level={3} className="py-4 text-center">
@@ -43,11 +53,6 @@ const InfoSection = () => {
                 fadeType="zoom-blur"
                 className="w-full max-w-full shrink-0 rounded-md"
               />
-              {/* <img
-                src={Crow}
-                alt="Ворона"
-                className="w-full max-w-full shrink-0 rounded-md object-cover"
-              /> */}
             </div>
             <p className="min-w-0 flex-1 hyphens-auto sm:text-left">
               Разнообразный и богатый опыт говорит нам, что сплочённость команды профессионалов
@@ -55,7 +60,7 @@ const InfoSection = () => {
             </p>
           </div>
           <div className="flex justify-end p-4">
-            <Button>
+            <Button variant="link">
               <a href="#AboutBook">Узнать подробнее</a>
             </Button>
           </div>
@@ -67,7 +72,7 @@ const InfoSection = () => {
           </Title>
           <div className="flex flex-col items-center gap-4 p-4 pt-0 sm:flex-row sm:items-start">
             <div className="border-border-main flex-1 rounded-md border">
-               <Image
+              <Image
                 src={Crow}
                 alt="Ворона"
                 fit="cover"
@@ -82,7 +87,7 @@ const InfoSection = () => {
             </p>
           </div>
           <div className="flex justify-end p-4">
-            <Button>
+            <Button variant="link">
               <a href="#AboutAuthor">Узнать подробнее</a>
             </Button>
           </div>

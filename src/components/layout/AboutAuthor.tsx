@@ -15,7 +15,7 @@ const AboutAuthor = () => {
       <div className="bg-bg-secondary border-border-main flex max-w-300 flex-wrap items-center justify-center gap-8 rounded-md border p-8">
         <div className="order-2 flex min-w-0 flex-col">
           <div className="pb-10">
-            <p className="max-w-120 hyphens-auto">
+            <p className="max-w-140 hyphens-auto">
               Значимость этих проблем настолько очевидна, что семантический разбор внешних
               противодействий однозначно фиксирует необходимость распределения внутренних резервов и
               ресурсов. Картельные сговоры не допускают ситуации, при которой представители
@@ -28,17 +28,17 @@ const AboutAuthor = () => {
             <ul className="flex justify-center gap-2">
               <li>
                 <a href="">
-                  <VkIcon className="h-10 w-14" title="Вк автора" />
+                  <VkIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Вк автора" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <TgIcon className="h-10 w-14" title="Тг автора" />
+                  <TgIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Тг автора" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <GroupIcon className="h-10 w-14" title="Канал автора в телеграмме" />
+                  <GroupIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Канал автора в телеграмме" />
                 </a>
               </li>
             </ul>

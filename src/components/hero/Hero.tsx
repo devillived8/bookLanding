@@ -5,12 +5,20 @@ import Title from '../title/Title';
 
 const Hero = () => {
   return (
-    <div
-      className="border-border-main relative flex min-h-75 flex-col border-b bg-cover bg-right bg-no-repeat p-4 md:min-h-125 md:bg-top md:p-8 lg:p-12"
-      style={{ backgroundImage: `url(${bannerBg})` }}
-    >
+    <section className="border-border-main relative flex min-h-75 flex-col overflow-hidden border-b p-4 md:min-h-125 md:p-8 lg:p-12">
+
+      <img
+        src={bannerBg}
+        alt=""
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover object-right md:object-top"
+      />
+
       <div className="pointer-events-none absolute inset-0 bg-black/30" />
-      <div className="relative z-1 flex flex-1 flex-col items-start justify-center">
+
+      <div className="relative z-10 flex flex-1 flex-col items-start justify-center">
         <Title
           level={1}
           style={{
@@ -24,6 +32,7 @@ const Hero = () => {
         >
           ТЕНЬ ЦЕРБЕРА
         </Title>
+
         <p className="text-text-muted text-lg tracking-widest uppercase md:text-xl">
           Триллер-детектив
         </p>
@@ -32,12 +41,13 @@ const Hero = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
+
       <div className="relative z-10 self-start">
         <Button className="self-start">
           <a href="#WhereFind">Где читать</a>
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

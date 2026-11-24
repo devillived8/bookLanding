@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from '../layout/Header';
 import Hero from '../hero/Hero';
 import MobileMenu from '../layout/MobileMenu';
@@ -10,31 +10,11 @@ import WhereFind from '../layout/WhereFind';
 import Atmosphera from '../layout/Atmosphera';
 import AboutAuthor from '../layout/AboutAuthor';
 import { Footer } from '../layout/Footer';
-import Preloader from '../preloader/Preloader';
+
 
 const App = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState(
-  () => document.readyState !== 'complete'
-);
 
-useEffect(() => {
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
-  if (document.readyState !== 'complete') {
-    window.addEventListener('load', handleLoad);
-  }
-
-  return () => {
-    window.removeEventListener('load', handleLoad);
-  };
-}, []);
-
-  if (isLoading) {
-    return <Preloader />;
-  }
 
   const handleToggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);

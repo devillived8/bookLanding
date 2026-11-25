@@ -9,14 +9,14 @@ interface IHeaderProps {
 
 const Header = ({ toggleMenu, isMenuOpen }: IHeaderProps) => {
   return (
-    <header className="border-border-main sticky top-0 z-20 flex items-center justify-between border-b bg-black p-4">
+    <header className="border-border-main sticky top-0 z-20 flex items-center justify-between border-b bg-bg-secondary p-4">
       <a href="/">
         <img src={logo} alt="тут будет логотип" className="h-8" />
       </a>
       <nav className="hidden md:block">
         <ul className="divide-text-muted flex divide-x">
           {navItems.map((item) => (
-            <li>
+            <li key={item.href}>
               <a href={item.href} className="hover:text-accent-red block px-4 transition-colors">
                 {item.label}
               </a>

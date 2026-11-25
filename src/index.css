@@ -23,38 +23,18 @@
   --color-accent-white: oklch(97.1% 0.013 17.38);
   --color-text-muted: oklch(86.8% 0.007 39.5);
   --color-border-main: oklch(37.2% 0.044 257.287);
-  --color-bg-main: oklch(14.5% 0 0 / 50%);
+  /* Секции — ваш "main", чуть светлее базы, БЕЗ альфы */
+--color-bg-main:      oklch(16% 0 0);
+
+/* Header / Footer — ваш "secondary", на уровне базы или между base и main */
+--color-bg-secondary: oklch(14% 0 0);
+
+/* Элементы внутри секций — ваш "surface", приподнят, но не кричит */
+--color-bg-surface:   oklch(22% 0 0);
+  /* --color-bg-main: oklch(14.5% 0 0 / 50%);
   --color-bg-secondary: oklch(20.5% 0 0);
-  --color-bg-surface: oklch(37.1% 0 0);
+  --color-bg-surface: oklch(37.1% 0 0); */
   --animate-loader: loader 1.5s ease-in-out infinite;
-
-  @keyframes loader {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    50% {
-      transform: translateX(100%);
-    }
-
-    100% {
-      transform: translateX(300%);
-    }
-  }
-
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
-
-  @keyframes pulse-glow {
-    0%, 100% {
-      opacity: 0.6;
-      text-shadow: 0 0 5px rgb(220 38 38 / 30%);
-    }
-
-    50% {
-      opacity: 1;
-      text-shadow: 0 0 15px rgb(220 38 38 / 80%);
-    }
-  }
 }
 
 @utility neon-border {
@@ -114,9 +94,3 @@
 }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-loader,
-  .animate-pulse-glow {
-    animation: none;
-  }
-}

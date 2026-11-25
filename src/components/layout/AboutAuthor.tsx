@@ -12,10 +12,10 @@ const AboutAuthor = () => {
       id="AboutAuthor"
       className="flex flex-col items-center justify-center"
     >
-      <div className="bg-bg-secondary border-border-main flex max-w-300 flex-wrap items-center justify-center gap-8 rounded-md border p-8">
+      <div className=" flex w-full flex-wrap items-center justify-center gap-8 rounded-md p-8 bg-bg-main border border-border-main">
         <div className="order-2 flex min-w-0 flex-col">
           <div className="pb-10">
-            <p className="max-w-140 hyphens-auto">
+            <p className="max-w-200 hyphens-auto">
               Значимость этих проблем настолько очевидна, что семантический разбор внешних
               противодействий однозначно фиксирует необходимость распределения внутренних резервов и
               ресурсов. Картельные сговоры не допускают ситуации, при которой представители
@@ -24,21 +24,21 @@ const AboutAuthor = () => {
               обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
             </p>
           </div>
-          <div className="self-start">
+          <div className="self-end">
             <ul className="flex justify-center gap-2">
               <li>
-                <a href="">
-                  <VkIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Вк автора" />
+                <a href="" target='_blank' rel='noopener noreferrer'>
+                  <VkIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Вк автора" aria-label='Логотип вк' />
                 </a>
               </li>
               <li>
-                <a href="">
-                  <TgIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Тг автора" />
+                <a href="" target='_blank' rel='noopener noreferrer'>
+                  <TgIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Тг автора" aria-label='Логотип тг' />
                 </a>
               </li>
               <li>
-                <a href="">
-                  <GroupIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Канал автора в телеграмме" />
+                <a href="" target='_blank' rel='noopener noreferrer'>
+                  <GroupIcon className="h-10 w-14 transition-colors delay-100 duration-300 hover:text-accent-red" title="Канал автора в телеграмме" aria-label='Логотип группы тг' />
                 </a>
               </li>
             </ul>

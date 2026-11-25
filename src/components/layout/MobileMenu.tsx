@@ -18,7 +18,7 @@ const MobileMenu = ({ isMenuOpen, setMenuIsOpen }: IMobileMenuProps) => {
       <nav className="">
         <ul className="flex flex-col gap-4">
           {navItems.map((item) => (
-            <li>
+            <li key={item.href}>
               <a href={item.href} className="hover:text-accent-red block px-4 transition-colors" onClick={setMenuIsOpen}>
                 {item.label}
               </a>

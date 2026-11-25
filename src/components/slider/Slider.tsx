@@ -45,7 +45,7 @@ const Slider = ({ sliderItems, children }: ISliderProps) => {
     >
       {sliderItems.map((item) => (
         <SwiperSlide key={item.id} className="pb-10">
-          <div>
+          <div className='bg-bg-surface'>
             <Image
             src={item.img}
             alt={item.alt ?? item.title}

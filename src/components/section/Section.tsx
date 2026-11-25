@@ -9,7 +9,7 @@ interface ISectionProps extends React.ComponentProps<'section'> {
 const Section = ({ children, titleText, className, ...props }: ISectionProps) => {
   return (
     <section
-      className={`border-border-main bg-bg-main mt-4 mr-4 ml-4 rounded-md border p-4 ${className}`}
+      className={` mt-20 md:mt-40 mr-4 ml-4 rounded-md p-4 ${className}`}
       {...props}
     >
       <div>

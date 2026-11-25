@@ -43,10 +43,10 @@ const listItems = [
 
 const AboutBookSection = () => {
   return (
-    <Section titleText="О книге" id="AboutBook">
-      <div className="flex flex-col items-center gap-4">
-        <div className="bg-bg-secondary border-border-main flex max-w-300 flex-col items-center gap-6 rounded-md border p-8 sm:flex-row sm:gap-8">
-          <div className="neon-border w-64 shrink-0 self-center overflow-hidden rounded-xl sm:w-60 md:w-80">
+    <Section titleText="О книге" id="AboutBook" className='flex flex-col items-center'>
+      <div className="flex flex-col self-start  gap-8 w-full bg-bg-main border border-border-main rounded-md md:p-8">
+        <div className=" flex max-w-400 flex-col items-center gap-6 rounded-md p-4 md:p-8 sm:flex-row sm:gap-16 bg-bg-surface border-border-main border">
+          <div className="neon-border w-64 shrink-0 self-center  overflow-hidden rounded-xl sm:w-60 md:w-80">
             <Image
               src={test}
               alt="Персонаж Ян"
@@ -59,7 +59,7 @@ const AboutBookSection = () => {
               className="w-full"
             />
           </div>
-          <p className="max-w-lg hyphens-auto">
+          <p className="max-w-200 hyphens-auto">
             И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям,
             которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит
             нам, что консультация с широким активом предоставляет широкие возможности для прогресса
@@ -69,7 +69,7 @@ const AboutBookSection = () => {
           </p>
         </div>
 
-        <div className="bg-bg-secondary border-border-main flex max-w-300 flex-col items-center gap-6 rounded-md border p-8 sm:flex-row sm:gap-8">
+        <div className=" flex flex-col items-center self-end gap-6 rounded-md p-4 md:p-8 sm:flex-row sm:gap-16 bg-bg-surface border-border-main border">
           <div className="neon-border order-1 w-64 shrink-0 self-center overflow-hidden rounded-xl sm:order-2 sm:w-60 md:w-80 ">
             <Image
               src={test2}
@@ -83,7 +83,7 @@ const AboutBookSection = () => {
               className="w-full"
             />
           </div>
-          <p className="order-2 max-w-lg hyphens-auto sm:order-1">
+          <p className="order-2 max-w-200 hyphens-auto sm:order-1">
             И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям,
             которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит
             нам, что консультация с широким активом предоставляет широкие возможности для прогресса
@@ -93,8 +93,9 @@ const AboutBookSection = () => {
           </p>
         </div>
 
-        <div className="flex w-full justify-center pr-4 pl-4">
-          <ul className="bg-bg-secondary border-border-main flex flex-col items-start gap-8 rounded-md border p-8">
+        <div className="flex flex-col w-full justify-center items-center p-4 md:p-8 mt-8 bg-bg-surface border-border-main border rounded-md">
+          <p className="max-w-200 hyphens-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum ullam fugiat rem eius provident, nostrum possimus? Obcaecati, quas animi.</p>
+          <ul className=" flex flex-col items-center gap-8 rounded-md p-8">
             {listItems.map((item) => (
               <li key={item.id} className="flex items-center justify-center gap-4">
                 <img

@@ -26,8 +26,8 @@ const sliderItems = [
 
 const InfoSection = () => {
   return (
-    <Section titleText="Краткая информация" className="relative z-9 mt-4 flex flex-col">
-      <div className="flex flex-col gap-4 lg:flex-row">
+    <Section titleText="Краткая информация" className="relative z-9 mt-4! flex flex-col">
+      <div className="flex flex-col gap-4 lg:flex-row w-full p-4 md:p-8 border-border-main border bg-bg-main rounded-md">
         <div className="md:hidden">
           <Slider sliderItems={sliderItems}>
             {(item) => (
@@ -39,7 +39,7 @@ const InfoSection = () => {
             )}
           </Slider>
         </div>
-        <div className="border-border-main bg-bg-secondary hidden flex-1 rounded-md border md:block">
+        <div className="border-border-main bg-bg-surface hidden flex-1 rounded-md border md:block">
           <Title level={3} className="py-4 text-center">
             Об книге
           </Title>
@@ -66,7 +66,7 @@ const InfoSection = () => {
           </div>
         </div>
 
-        <div className="border-border-main bg-bg-secondary hidden flex-1 rounded-md border md:block">
+        <div className="border-border-main bg-bg-surface hidden flex-1 rounded-md border md:block">
           <Title level={3} className="py-4 text-center">
             Об авторе
           </Title>
@@ -87,8 +87,8 @@ const InfoSection = () => {
             </p>
           </div>
           <div className="flex justify-end p-4">
-            <Button variant="link">
-              <a href="#AboutAuthor">Узнать подробнее</a>
+            <Button variant="link" href="#AboutAuthor">
+              Узнать подробнее
             </Button>
           </div>
         </div>

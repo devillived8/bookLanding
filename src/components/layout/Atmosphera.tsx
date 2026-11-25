@@ -11,34 +11,37 @@ const Atmosphera = () => {
 
   return (
     <Section titleText="Атмосфера" id='Atmosphera'>
-      <div className="flex flex-col items-center">
-        <div className="flex w-full flex-wrap justify-center gap-8">
-          <div className="bg-bg-secondary border-border-main flex flex-col items-center justify-center gap-4 rounded-md border p-8 md:flex-1">
+      <div className="flex flex-col items-center rounded-md bg-bg-main border border-border-main p-4">
+        
+        <div className="flex flex-wrap w-full justify-center gap-15">
+          <div className="flex flex-col max-w-90.75 items-center justify-center p-4 gap-4 bg-bg-surface border-border-main border rounded-md">
             <iframe
               className="aspect-[363/714] h-auto w-full max-w-[363px] rounded-md"
-              src="https://vk.ru/clip_ext.php?oid=438748581&id=456241227&autoplay=1"
+              src="https://vk.ru/clip_ext.php?oid=438748581&id=456241227"
               width="363"
               height="714"
               allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
               frameBorder="0"
               allowFullScreen
               loading='lazy'
+              title='Видеоклип вконтакте'
             ></iframe>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto, optio sint
               eos nesciunt illo hic quo illum recusandae possimus.
             </p>
           </div>
-          <div className="bg-bg-secondary border-border-main flex flex-col items-center justify-center gap-4 rounded-md border p-8 md:flex-1">
+          <div className=" flex flex-col max-w-90.75 items-center justify-center p-4 gap-4 rounded-md bg-bg-surface border-border-main border rounded-md">
             <iframe
               className="aspect-[363/714] h-auto w-full max-w-[363px] rounded-md"
-              src="https://vk.ru/clip_ext.php?oid=438748581&id=456241201&autoplay=1"
+              src="https://vk.ru/clip_ext.php?oid=438748581&id=456241201"
               width="363"
               height="714"
               allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
               frameBorder="0"
               allowFullScreen
               loading='lazy'
+              title='Видеоклип вконтакте'
             ></iframe>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tenetur earum esse
@@ -46,7 +49,9 @@ const Atmosphera = () => {
             </p>
           </div>
         </div>
-        <div className='mt-8'>
+
+
+        <div className='mt-8 bg-bg-surface border-border-main border rounded-md p-4'>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatem deserunt dolor consequatur debitis ipsum quae, odio vel nisi ad.</p>
              <AudioPlayer tracks={tracks}></AudioPlayer>
         </div>

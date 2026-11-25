@@ -17,12 +17,12 @@ const App = () => {
 
 
   const handleToggleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
+    setMenuIsOpen((prev) => !prev);
   };
 
   return (
     <>
-      <div className="pointer-events-none fixed inset-0 z-10 bg-black/50" />
+      <div className="pointer-events-none fixed inset-0 z-10 bg-black/70" />
       <MobileMenu isMenuOpen={menuIsOpen} setMenuIsOpen={handleToggleMenu}></MobileMenu>
       <Header toggleMenu={handleToggleMenu} isMenuOpen={menuIsOpen} />
       <Overlay isMenuOpen={menuIsOpen} toggleMenu={handleToggleMenu}></Overlay>

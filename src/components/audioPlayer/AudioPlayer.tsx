@@ -25,15 +25,15 @@ const MyAudioPlayer = ({ tracks }: IAudioPlayerProps) => {
   };
 
   return (
-    <div className=" flex w-full flex-col items-center p-6">
+    <div className=" flex w-full flex-col items-center p-2">
       <AudioPlayer
       className='max-w-200 rounded-md border border-border-main bg-bg-secondary! text-'
         src={currentTrack.src}
         showSkipControls={true}
-        showJumpControls={false} // Скрываем перемотку на 5 сек, чтобы не мешала
+        showJumpControls={false}
         onClickPrevious={handlePrevious}
         onClickNext={handleNext}
-        onEnded={handleNext} // Автоматически включаем следующий трек
+        onEnded={handleNext}
         header={`Сейчас играет: ${currentTrack.title}`}
         customIcons={{
           previous: <span className=''>⏮</span>,

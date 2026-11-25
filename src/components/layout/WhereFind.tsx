@@ -8,8 +8,8 @@ import LitnetIcon from '../../assets/img/litner-icon.svg?react';
 const WhereFind = () => {
   return (
     <Section titleText="Где найти книгу" id="WhereFind" className="flex flex-col items-center">
-      <div className="bg-bg-main border-border-main w-full rounded-md border p-4">
-        <div className="bg-bg-surface border-border-main border rounded-md p-8">
+      <div className="w-full">
+        <div className="bg-bg-surface border-border-component border rounded-md p-8">
           <div className="flex justify-center pb-4">
             <p className="max-w-200 hyphens-auto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus ratione

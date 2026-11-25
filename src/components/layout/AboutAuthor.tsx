@@ -12,8 +12,8 @@ const AboutAuthor = () => {
       id="AboutAuthor"
       className="flex flex-col items-center justify-center"
     >
-      <div className=" flex w-full flex-wrap items-center justify-center gap-8 rounded-md p-8 bg-bg-main border border-border-main">
-        <div className="order-2 flex min-w-0 flex-col">
+      <div className=" flex w-full flex-wrap items-center justify-center rounded-md border border-border-component bg-bg-surface">
+        <div className="order-2 flex min-w-0 flex-col bg-bg-surface p-4 md:p-8 ">
           <div className="pb-10">
             <p className="max-w-200 hyphens-auto">
               Значимость этих проблем настолько очевидна, что семантический разбор внешних
@@ -44,7 +44,7 @@ const AboutAuthor = () => {
             </ul>
           </div>
         </div>
-        <div className="order-1 w-60 min-w-0 shrink sm:min-w-40">
+        <div className="order-1 w-60 min-w-0 shrink sm:min-w-80 p-4 md:p-8">
           <Image
             src={author}
             height='420'

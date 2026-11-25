@@ -43,10 +43,10 @@ const listItems = [
 
 const AboutBookSection = () => {
   return (
-    <Section titleText="О книге" id="AboutBook" className='flex flex-col items-center'>
-      <div className="flex flex-col self-start  gap-8 w-full bg-bg-main border border-border-main rounded-md md:p-8">
-        <div className=" flex max-w-400 flex-col items-center gap-6 rounded-md p-4 md:p-8 sm:flex-row sm:gap-16 bg-bg-surface border-border-main border">
-          <div className="neon-border w-64 shrink-0 self-center  overflow-hidden rounded-xl sm:w-60 md:w-80">
+    <Section titleText="О книге" id="AboutBook" className="flex flex-col items-center">
+      <div className=" flex w-full flex-col gap-8 justify-center self-start">
+        <div className="bg-bg-surface border-border-component flex max-w-400 flex-col items-center gap-6 md:self-start rounded-md border p-4 sm:flex-row sm:gap-16 md:p-8">
+          <div className="neon-border w-64 shrink-0 self-center overflow-hidden rounded-xl sm:w-60 md:w-80">
             <Image
               src={test}
               alt="Персонаж Ян"
@@ -69,8 +69,8 @@ const AboutBookSection = () => {
           </p>
         </div>
 
-        <div className=" flex flex-col items-center self-end gap-6 rounded-md p-4 md:p-8 sm:flex-row sm:gap-16 bg-bg-surface border-border-main border">
-          <div className="neon-border order-1 w-64 shrink-0 self-center overflow-hidden rounded-xl sm:order-2 sm:w-60 md:w-80 ">
+        <div className="bg-bg-surface border-border-component flex max-w-400 flex-col items-center gap-6 md:self-end rounded-md border p-4 sm:flex-row sm:gap-16 md:p-8">
+          <div className="neon-border order-1 w-64 shrink-0 self-center overflow-hidden rounded-xl sm:order-2 sm:w-60 md:w-80">
             <Image
               src={test2}
               alt="Персонаж Ника"
@@ -93,9 +93,12 @@ const AboutBookSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col w-full justify-center items-center p-4 md:p-8 mt-8 bg-bg-surface border-border-main border rounded-md">
-          <p className="max-w-200 hyphens-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum ullam fugiat rem eius provident, nostrum possimus? Obcaecati, quas animi.</p>
-          <ul className=" flex flex-col items-center gap-8 rounded-md p-8">
+        <div className="bg-bg-surface border-border-component  flex w-full flex-col items-center justify-center rounded-md border p-4 md:p-8">
+          <p className="max-w-200 hyphens-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum ullam fugiat
+            rem eius provident, nostrum possimus? Obcaecati, quas animi.
+          </p>
+          <ul className="flex flex-col items-center gap-8 rounded-md p-4 md:p-8">
             {listItems.map((item) => (
               <li key={item.id} className="flex items-center justify-center gap-4">
                 <img

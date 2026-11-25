@@ -26,8 +26,8 @@ const sliderItems = [
 
 const InfoSection = () => {
   return (
-    <Section titleText="Краткая информация" className="relative z-9 mt-4! flex flex-col">
-      <div className="flex flex-col gap-4 lg:flex-row w-full p-4 md:p-8 border-border-main border bg-bg-main rounded-md">
+    <Section titleText="Краткая информация" className="relative z-9 mt-4!">
+      <div className="flex flex-col gap-4 lg:flex-row w-full ">
         <div className="md:hidden">
           <Slider sliderItems={sliderItems}>
             {(item) => (
@@ -39,12 +39,12 @@ const InfoSection = () => {
             )}
           </Slider>
         </div>
-        <div className="border-border-main bg-bg-surface hidden flex-1 rounded-md border md:block">
+        <div className="border-border-component bg-bg-surface hidden flex-1 rounded-md border md:block">
           <Title level={3} className="py-4 text-center">
             Об книге
           </Title>
           <div className="flex flex-col items-center gap-4 p-4 pt-0 sm:flex-row sm:items-start">
-            <div className="border-border-main flex-1 rounded-md border">
+            <div className=" flex-1 rounded-md">
               <Image
                 src={Crow}
                 alt="Ворона"
@@ -66,12 +66,12 @@ const InfoSection = () => {
           </div>
         </div>
 
-        <div className="border-border-main bg-bg-surface hidden flex-1 rounded-md border md:block">
+        <div className="border-border-component bg-bg-surface hidden flex-1 rounded-md border md:block">
           <Title level={3} className="py-4 text-center">
             Об авторе
           </Title>
           <div className="flex flex-col items-center gap-4 p-4 pt-0 sm:flex-row sm:items-start">
-            <div className="border-border-main flex-1 rounded-md border">
+            <div className="flex-1 rounded-md">
               <Image
                 src={Crow}
                 alt="Ворона"

@@ -27,7 +27,7 @@ const MyAudioPlayer = ({ tracks }: IAudioPlayerProps) => {
   return (
     <div className=" flex w-full flex-col items-center p-2">
       <AudioPlayer
-      className='max-w-200 rounded-md border border-border-main bg-bg-secondary! text-'
+      className='max-w-200 rounded-md border border-border-component bg-bg-secondary! text-'
         src={currentTrack.src}
         showSkipControls={true}
         showJumpControls={false}

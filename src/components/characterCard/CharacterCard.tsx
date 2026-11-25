@@ -8,7 +8,7 @@ interface ICharacterCard {
 
 const CharacterCard = ({ img, text, name }: ICharacterCard) => {
   return (
-    <div className="border-border-main bg-bg-secondary rounded-md border">
+    <div className="border-border-component bg-bg-surface rounded-md border">
       <div></div>
       <div className="aspect-3/4 w-full">
         <img

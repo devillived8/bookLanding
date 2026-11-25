@@ -5,7 +5,7 @@ import Title from '../title/Title';
 
 const Hero = () => {
   return (
-    <section className="border-border-main relative flex min-h-75 flex-col overflow-hidden border-b p-4 md:min-h-125 md:p-8 lg:p-12">
+    <section className="border-border-section relative flex min-h-75 flex-col overflow-hidden border-b p-4 md:min-h-125 md:p-8 lg:p-12">
       <img
         src={bannerBg}
         alt=""

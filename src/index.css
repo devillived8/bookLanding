@@ -23,18 +23,11 @@
   --color-accent-white: oklch(97.1% 0.013 17.38);
   --color-text-muted: oklch(86.8% 0.007 39.5);
   --color-border-main: oklch(37.2% 0.044 257.287);
-  /* Секции — ваш "main", чуть светлее базы, БЕЗ альфы */
---color-bg-main:      oklch(16% 0 0);
-
-/* Header / Footer — ваш "secondary", на уровне базы или между base и main */
---color-bg-secondary: oklch(14% 0 0);
-
-/* Элементы внутри секций — ваш "surface", приподнят, но не кричит */
---color-bg-surface:   oklch(22% 0 0);
-  /* --color-bg-main: oklch(14.5% 0 0 / 50%);
-  --color-bg-secondary: oklch(20.5% 0 0);
-  --color-bg-surface: oklch(37.1% 0 0); */
-  --animate-loader: loader 1.5s ease-in-out infinite;
+  --color-bg-main: oklch(16% 0 0);
+  --color-bg-secondary: oklch(14% 0 0);
+  --color-bg-surface: oklch(22% 0 0);
+  --color-border-section:   oklch(100% 0 0 / 8%);
+  --color-border-component: oklch(100% 0 0 / 14%);
 }
 
 @utility neon-border {
@@ -59,38 +52,37 @@
   }
 
   /* Фон контейнера (если хотите переопределить bg-bg-secondary) */
-.rhap_container {
-  background-color: var(--color-bg-secondary); /* или ваш цвет */
-  box-shadow: none; /* убираем тень по умолчанию, если мешает */
-}
+  .rhap_container {
+    background-color: var(--color-bg-secondary); /* или ваш цвет */
+    box-shadow: none; /* убираем тень по умолчанию, если мешает */
+  }
 
-/* Цвет полосы прогресса и точки-ползунка */
-.rhap_progress-filled,
-.rhap_progress-indicator {
-  background-color: var(--color-accent-red) !important;
-}
+  /* Цвет полосы прогресса и точки-ползунка */
+  .rhap_progress-filled,
+  .rhap_progress-indicator {
+    background-color: var(--color-accent-red) !important;
+  }
 
-.rhap_theme-color{
-  background-color: var(--color-accent-red) !important;
-}
+  .rhap_theme-color {
+    background-color: var(--color-accent-red) !important;
+  }
 
-.rhap_background-color {
-  background-color: var(--color-accent-red) !important;
-}
-/* Цвет иконок кнопок (play, next, previous и т.д.) */
-.rhap_main-controls-button svg {
-  color: var(--color-accent-red) !important;
-}
+  .rhap_background-color {
+    background-color: var(--color-accent-red) !important;
+  }
+  /* Цвет иконок кнопок (play, next, previous и т.д.) */
+  .rhap_main-controls-button svg {
+    color: var(--color-accent-red) !important;
+  }
 
-/* Цвет времени (текущее / общее) */
-.rhap_time {
-  color: var(--color-text-muted) !important;
-}
+  /* Цвет времени (текущее / общее) */
+  .rhap_time {
+    color: var(--color-text-muted) !important;
+  }
 
-/* Цвет громкости */
-.rhap_volume-bar,
-.rhap_volume-indicator {
-  background-color: var(--color-accent-red) !important;
+  /* Цвет громкости */
+  .rhap_volume-bar,
+  .rhap_volume-indicator {
+    background-color: var(--color-accent-red) !important;
+  }
 }
-}
-

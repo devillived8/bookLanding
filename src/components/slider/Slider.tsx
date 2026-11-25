@@ -24,7 +24,7 @@ interface ISliderProps {
 const Slider = ({ sliderItems, children }: ISliderProps) => {
   return (
     <Swiper
-      className="bg-bg-secondary border-border-main max-h-200 rounded-md border"
+      className="bg-bg-secondary border-border-component max-h-200 rounded-md border"
       style={
         {
           '--swiper-navigation-color': '#fff', // Цвет стрелок

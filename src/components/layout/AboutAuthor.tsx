@@ -44,7 +44,7 @@ const AboutAuthor = () => {
             </ul>
           </div>
         </div>
-        <div className="order-1 w-60 min-w-0 shrink sm:min-w-80 p-4 md:p-8">
+        <div className="order-1 w-60 min-w-0 shrink sm:min-w-80 p-4 md:p-8 dark-neon-border">
           <Image
             src={author}
             height='420'
@@ -53,7 +53,7 @@ const AboutAuthor = () => {
             fit="cover"
             placeholder="skeleton"
             fadeType="zoom-blur"
-            className="rounded-full"
+            className="rounded-full "
           />
         </div>
       </div>

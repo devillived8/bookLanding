@@ -9,7 +9,7 @@ interface ITitleProps extends React.ComponentProps<'h2'> {
 const titleStyles: Record<HeadingLevel, string> = {
   1: 'text-4xl md:text-6xl lg:text-7xl font-display text-accent-red text-shadow-accent-red text-shadow-md',
   2: 'text-2xl font-display font-bold',
-  3: 'text-xl font-display font-md',
+  3: 'text-xl font-display font-bold',
 };
 
 const Title = ({ level = 2, className = '', children, ...props }: ITitleProps) => {

@@ -6,7 +6,8 @@ import manIcon from '../../assets/img/man-icon.png';
 import pizzaIcon from '../../assets/img/pizza-icon.png';
 import heartIcon from '../../assets/img/heart-icon.png';
 import hatIcon from '../../assets/img/hat-icon.png';
-import { Image } from 'react-image-and-background-image-fade';
+import AboutBookItems from '../aboutBookItem/AboutBookItems';
+import Title from '../title/Title';
 
 const listItems = [
   {
@@ -41,60 +42,40 @@ const listItems = [
   },
 ];
 
+const aboutBookItems = [
+  {
+    id: 'first',
+    src: test,
+    alt: 'Персонаж Ян',
+    text: 'И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит нам, что консультация с широким активом предоставляет широкие возможности для прогресса профессионального сообщества. Каждый из нас понимает очевидную вещь: курс на социально-ориентированный национальный проект выявляет срочную потребность первоочередных требований.',
+    direction: 'toRight',
+  },
+  {
+    id: 'twice',
+    src: test2,
+    alt: 'Персонаж Ника',
+    text: 'И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит нам, что консультация с широким активом предоставляет широкие возможности для прогресса профессионального сообщества. Каждый из нас понимает очевидную вещь: курс на социально-ориентированный национальный проект выявляет срочную потребность первоочередных требований.',
+    direction: 'toLeft',
+  },
+] as const;
+
 const AboutBookSection = () => {
   return (
     <Section titleText="О книге" id="AboutBook" className="flex flex-col items-center">
-      <div className=" flex w-full flex-col gap-8 justify-center self-start">
-        <div className="bg-bg-surface border-border-component flex max-w-400 flex-col items-center gap-6 md:self-start rounded-md border p-4 sm:flex-row sm:gap-16 md:p-8">
-          <div className="neon-border w-64 shrink-0 self-center overflow-hidden rounded-xl sm:w-60 md:w-80">
-            <Image
-              src={test}
-              alt="Персонаж Ян"
-              width={400}
-              height={600}
-              fit="cover"
-              position="top"
-              placeholder="skeleton"
-              fadeType="zoom-blur"
-              className="w-full"
-            />
-          </div>
-          <p className="max-w-200 hyphens-auto">
-            И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям,
-            которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит
-            нам, что консультация с широким активом предоставляет широкие возможности для прогресса
-            профессионального сообщества. Каждый из нас понимает очевидную вещь: курс на
-            социально-ориентированный национальный проект выявляет срочную потребность
-            первоочередных требований.
-          </p>
-        </div>
+      <div className="flex w-full flex-col justify-center gap-8 self-start">
+        {aboutBookItems.map((item) => (
+          <AboutBookItems
+            key={item.id}
+            src={item.src}
+            alt={item.alt}
+            text={item.text}
+            direction={item.direction}
+          />
+        ))}
 
-        <div className="bg-bg-surface border-border-component flex max-w-400 flex-col items-center gap-6 md:self-end rounded-md border p-4 sm:flex-row sm:gap-16 md:p-8">
-          <div className="neon-border order-1 w-64 shrink-0 self-center overflow-hidden rounded-xl sm:order-2 sm:w-60 md:w-80">
-            <Image
-              src={test2}
-              alt="Персонаж Ника"
-              width={400}
-              height={600}
-              fit="cover"
-              position="top"
-              placeholder="skeleton"
-              fadeType="zoom-blur"
-              className="w-full"
-            />
-          </div>
-          <p className="order-2 max-w-200 hyphens-auto sm:order-1">
-            И нет сомнений, что акционеры крупнейших компаний призывают нас к новым свершениям,
-            которые, в свою очередь, должны быть обнародованы. Разнообразный и богатый опыт говорит
-            нам, что консультация с широким активом предоставляет широкие возможности для прогресса
-            профессионального сообщества. Каждый из нас понимает очевидную вещь: курс на
-            социально-ориентированный национальный проект выявляет срочную потребность
-            первоочередных требований.
-          </p>
-        </div>
-
-        <div className="bg-bg-surface border-border-component  flex w-full flex-col items-center justify-center rounded-md border p-4 md:p-8">
-          <p className="max-w-200 hyphens-auto">
+        <div className="bg-bg-surface border-border-component flex w-full flex-col items-center justify-center rounded-md border p-4 md:p-8">
+          <Title level={3} className='text-center mb-4 md:mb-8'>Заголовок</Title>
+          <p className="max-w-200 hyphens-auto mb-4 md:mb-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum ullam fugiat
             rem eius provident, nostrum possimus? Obcaecati, quas animi.
           </p>

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
 @import 'react-image-and-background-image-fade/styles.css';
 
 @font-face {
@@ -20,6 +21,7 @@
   --font-sans: 'Golos', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Russo', sans-serif;
   --color-accent-red: oklch(57.7% 0.245 27.325);
+  --color-dark-accent-red: oklch(25.48% 0.0718 27.53);
   --color-accent-white: oklch(97.1% 0.013 17.38);
   --color-text-muted: oklch(86.8% 0.007 39.5);
   --color-border-main: oklch(37.2% 0.044 257.287);
@@ -31,10 +33,21 @@
 }
 
 @utility neon-border {
-  filter: drop-shadow(0 0 10px #ef4444) drop-shadow(0 10px 35px rgba(239, 68, 68, 0.8));
+  filter: drop-shadow(0 0 10px #4a0c0c) drop-shadow(0 10px 35px rgba(239, 68, 68, 0.8));
+}
+
+@utility dark-neon-border {
+  filter:
+  drop-shadow(0 0 2px #4a0c0c)
+  drop-shadow(0 0 4px #4a0c0c)
+  drop-shadow(0 0 6px #4a0c0c)
+  drop-shadow(0 0 8px #4a0c0c);
 }
 
 @layer base {
+
+
+
   body {
     font-family: var(--font-sans);
     color: var(--color-text-muted);
@@ -51,10 +64,10 @@
     scroll-behavior: smooth;
   }
 
-  /* Фон контейнера (если хотите переопределить bg-bg-secondary) */
+  /* Фон контейнера*/
   .rhap_container {
-    background-color: var(--color-bg-secondary); /* или ваш цвет */
-    box-shadow: none; /* убираем тень по умолчанию, если мешает */
+    background-color: var(--color-bg-secondary);
+    box-shadow: none;
   }
 
   /* Цвет полосы прогресса и точки-ползунка */

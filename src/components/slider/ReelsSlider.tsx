@@ -24,11 +24,7 @@ const defaultBreakpoints = {
   1280: { slidesPerView: 3 },
 };
 
-const ReelsSlider = ({
-  items,
-  children,
-  breakpoints = defaultBreakpoints,
-}: IReelsSliderProps) => {
+const ReelsSlider = ({ items, children, breakpoints = defaultBreakpoints }: IReelsSliderProps) => {
   if (!items.length) return null;
 
   return (
@@ -61,9 +57,7 @@ const ReelsSlider = ({
               loading="lazy"
               title={item.title ?? 'Видеоклип'}
             />
-            {item.text && (
-              <p className="hyphens-auto text-center">{item.text}</p>
-            )}
+            {item.text && <p className="text-center hyphens-auto">{item.text}</p>}
             {children?.(item)}
           </div>
         </SwiperSlide>

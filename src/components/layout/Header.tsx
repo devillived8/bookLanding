@@ -9,7 +9,7 @@ interface IHeaderProps {
 
 const Header = ({ toggleMenu, isMenuOpen }: IHeaderProps) => {
   return (
-    <header className="border-border-main sticky top-0 z-20 flex items-center justify-between border-b bg-bg-secondary p-4">
+    <header className="border-border-main bg-bg-secondary sticky top-0 z-20 flex items-center justify-between border-b p-4">
       <a href="/">
         <img src={logo} alt="тут будет логотип" className="h-8" />
       </a>

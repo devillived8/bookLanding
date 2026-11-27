@@ -13,21 +13,14 @@ const Button = (props: ButtonProps) => {
 
   if (props.variant === 'link') {
     return (
-      <a
-        {...props}
-        className={className}
-      >
+      <a {...props} className={className}>
         {props.children}
       </a>
     );
   }
 
   return (
-    <button
-      {...props}
-      type={props.type ?? 'button'}
-      className={className}
-    >
+    <button {...props} type={props.type ?? 'button'} className={className}>
       {props.children}
     </button>
   );

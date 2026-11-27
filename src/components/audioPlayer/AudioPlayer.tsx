@@ -29,6 +29,7 @@ const MyAudioPlayer = ({ tracks }: IAudioPlayerProps) => {
       <AudioPlayer
         className="border-border-component bg-bg-secondary! text- max-w-200 rounded-md border"
         src={currentTrack.src}
+        preload="none"
         showSkipControls={true}
         showJumpControls={false}
         onClickPrevious={handlePrevious}

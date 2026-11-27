@@ -27,7 +27,6 @@ const InfoSection = () => {
   return (
     <Section titleText="Краткая информация" className="relative z-9 mt-4!">
       <div className="flex w-full flex-col gap-4 lg:flex-row">
-
         <div className="md:hidden">
           <Slider sliderItems={sliderItems}>
             {(item) => (

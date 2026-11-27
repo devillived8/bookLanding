@@ -22,18 +22,16 @@ const reels: IReelItem[] = [
   },
 ];
 
-
 const ReelCard = ({ item }: { item: IReelItem }) => (
   <div className="bg-bg-surface border-border-component flex h-full flex-col items-center gap-4 rounded-md border p-4">
     <iframe
       className="aspect-[363/714] w-full max-w-[363px] rounded-md border-0"
       src={item.src}
       allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-      allowFullScreen
       loading="lazy"
       title={item.title ?? 'Видеоклип вконтакте'}
     />
-    {item.text && <p className="hyphens-auto text-center">{item.text}</p>}
+    {item.text && <p className="text-center hyphens-auto">{item.text}</p>}
   </div>
 );
 
@@ -41,14 +39,20 @@ const Atmosphera = () => {
   return (
     <Section titleText="Атмосфера" id="Atmosphera">
       <div className="flex flex-col items-center">
-        <div className='mb-4 md:mb-8'>
-          <p className='hyphens-auto'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque deserunt, praesentium facilis, aliquam beatae commodi fugit, blanditiis porro inventore velit soluta perspiciatis dolore eligendi? Explicabo tempore possimus non voluptas quis. Voluptatem consectetur quia culpa fugiat ducimus est eaque ex aliquam beatae, impedit quasi similique, nisi repudiandae explicabo omnis! Corporis architecto qui quasi consequuntur accusamus molestiae at numquam blanditiis quae veniam!</p>
-          </div>
+        <div className="mb-4 md:mb-8">
+          <p className="hyphens-auto">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque deserunt, praesentium
+            facilis, aliquam beatae commodi fugit, blanditiis porro inventore velit soluta
+            perspiciatis dolore eligendi? Explicabo tempore possimus non voluptas quis. Voluptatem
+            consectetur quia culpa fugiat ducimus est eaque ex aliquam beatae, impedit quasi
+            similique, nisi repudiandae explicabo omnis! Corporis architecto qui quasi consequuntur
+            accusamus molestiae at numquam blanditiis quae veniam!
+          </p>
+        </div>
 
         <div className="w-full md:hidden">
           <ReelsSlider items={reels} />
         </div>
-
 
         <div className="hidden w-full justify-center gap-15 md:flex md:flex-wrap">
           {reels.map((item) => (
@@ -60,9 +64,8 @@ const Atmosphera = () => {
 
         <div className="bg-bg-surface border-border-component mt-8 flex flex-col gap-4 rounded-md border p-4 md:gap-8">
           <p className="hyphens-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            voluptatem deserunt dolor consequatur debitis ipsum quae, odio vel
-            nisi ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatem deserunt
+            dolor consequatur debitis ipsum quae, odio vel nisi ad.
           </p>
           <AudioPlayer tracks={tracks} />
         </div>

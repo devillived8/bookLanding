@@ -12,12 +12,7 @@ const titleStyles: Record<HeadingLevel, string> = {
   3: 'text-xl font-display font-bold',
 };
 
-const Title = ({
-  level = 2,
-  className = '',
-  children,
-  ...props
-}: TitleProps) => {
+const Title = ({ level = 2, className = '', children, ...props }: TitleProps) => {
   const Tag = `h${level}` as 'h1' | 'h2' | 'h3';
 
   return (

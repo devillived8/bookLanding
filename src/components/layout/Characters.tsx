@@ -58,7 +58,13 @@ const Characters = () => {
       </div>
       <div className="hidden md:grid md:grid-cols-[1fr_1fr_1fr] md:grid-rows-[auto_auto] md:gap-8">
         {charactersArr.map((char) => (
-          <CharacterCard key={char.id} img={char.img} text={char.text} name={char.title} alt={char.alt}/>
+          <CharacterCard
+            key={char.id}
+            img={char.img}
+            text={char.text}
+            name={char.title}
+            alt={char.alt}
+          />
         ))}
       </div>
     </Section>

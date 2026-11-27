@@ -1,11 +1,11 @@
 import Section from '../section/Section';
 import test from '../../assets/img/test.webp';
 import test2 from '../../assets/img/test2.webp';
-import phoneIcon from '../../assets/img/phone-icon.png';
-import manIcon from '../../assets/img/man-icon.png';
-import pizzaIcon from '../../assets/img/pizza-icon.png';
-import heartIcon from '../../assets/img/heart-icon.png';
-import hatIcon from '../../assets/img/hat-icon.png';
+import phoneIcon from '../../assets/img/phone-icon.webp';
+import manIcon from '../../assets/img/man-icon.webp';
+import pizzaIcon from '../../assets/img/pizza-icon.webp';
+import heartIcon from '../../assets/img/heart-icon.webp';
+import hatIcon from '../../assets/img/hat-icon.webp';
 import AboutBookItems from '../aboutBookItem/AboutBookItems';
 import Title from '../title/Title';
 

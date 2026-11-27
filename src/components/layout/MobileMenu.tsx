@@ -1,4 +1,4 @@
-import BookLogo from '../../assets/img/book-logo.png';
+import BookLogo from '../../assets/img/book-logo.webp';
 import { navItems } from '../../config/navigation';
 
 interface IMobileMenuProps {

@@ -1,5 +1,3 @@
-
-
 // interface ITextProps extends React.ComponentProps<'p'> {
 //   variant?: 'accent' | 'muted' | 'default';
 // }
@@ -9,7 +7,6 @@
 //     muted: 'color-text-muted',
 //     default: 'color-text-default',
 // };
-
 
 // const Text = ({children, className, ...props}: ITextProps) => {
 //   return (

@@ -56,7 +56,7 @@ const AboutAuthor = () => {
             </ul>
           </div>
         </div>
-        <div className="dark-neon-border rounded-full overflow-hidden order-1 w-60 min-w-0 shrink p-4 sm:min-w-80 md:p-8">
+        <div className="dark-neon-border order-1 w-60 min-w-0 shrink overflow-hidden rounded-full p-4 sm:min-w-80 md:p-8">
           <ImageApp
             src={author}
             height="420"

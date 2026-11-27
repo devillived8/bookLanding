@@ -2,7 +2,10 @@ import Title from '../title/Title';
 
 export const Footer = () => {
   return (
-    <footer className="border-border-main relative z-10 mt-4 border bg-bg-secondary p-4" id='Contacts'>
+    <footer
+      className="border-border-main bg-bg-secondary relative z-10 mt-4 border p-4"
+      id="Contacts"
+    >
       <address className="not-italic">
         <Title level={3}>Для сотрудничества писать:</Title>
         <ul>

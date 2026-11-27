@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="border-border-section relative flex min-h-75 flex-col overflow-hidden border-b p-4 md:min-h-125 md:p-8 lg:p-12">
       <img
         src={bannerBg}
-        alt=""
+        alt="Тень цербера"
         fetchPriority="high"
         loading="eager"
         decoding="async"

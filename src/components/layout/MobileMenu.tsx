@@ -15,11 +15,15 @@ const MobileMenu = ({ isMenuOpen, setMenuIsOpen }: IMobileMenuProps) => {
       <div className="">
         <img src={BookLogo} alt="Картинка книги" className="h-16" />
       </div>
-      <nav className="">
+      <nav className="" id="mobile-menu">
         <ul className="flex flex-col gap-4">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="hover:text-accent-red block px-4 transition-colors" onClick={setMenuIsOpen}>
+              <a
+                href={item.href}
+                className="hover:text-accent-red block px-4 transition-colors"
+                onClick={setMenuIsOpen}
+              >
                 {item.label}
               </a>
             </li>

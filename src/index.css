@@ -28,7 +28,7 @@
   --color-bg-main: oklch(16% 0 0);
   --color-bg-secondary: oklch(14% 0 0);
   --color-bg-surface: oklch(22% 0 0);
-  --color-border-section:   oklch(100% 0 0 / 8%);
+  --color-border-section: oklch(100% 0 0 / 8%);
   --color-border-component: oklch(100% 0 0 / 14%);
 }
 
@@ -37,16 +37,18 @@
 }
 
 @utility dark-neon-border {
-  filter:
-  drop-shadow(0 0 2px #4a0c0c)
-  drop-shadow(0 0 4px #4a0c0c)
-  drop-shadow(0 0 6px #4a0c0c)
-  drop-shadow(0 0 8px #4a0c0c);
+  filter: drop-shadow(0 0 2px #4a0c0c) drop-shadow(0 0 4px #4a0c0c) drop-shadow(0 0 6px #4a0c0c)
+    drop-shadow(0 0 8px #4a0c0c);
 }
 
 @layer base {
-
-
+  .ribif-root {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+  }
 
   body {
     font-family: var(--font-sans);

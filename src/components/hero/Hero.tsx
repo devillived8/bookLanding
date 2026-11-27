@@ -14,7 +14,6 @@ const Hero = () => {
         decoding="async"
         className="absolute inset-0 h-full w-full object-cover object-right md:object-top"
       />
-
       <div className="pointer-events-none absolute inset-0 bg-black/30" />
 
       <div className="relative z-10 flex flex-1 flex-col items-start justify-center">

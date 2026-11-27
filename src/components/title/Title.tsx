@@ -2,7 +2,7 @@ import React from 'react';
 
 type HeadingLevel = 1 | 2 | 3;
 
-interface ITitleProps extends React.ComponentProps<'h2'> {
+interface TitleProps extends React.ComponentProps<'h1'> {
   level?: HeadingLevel;
 }
 
@@ -12,8 +12,13 @@ const titleStyles: Record<HeadingLevel, string> = {
   3: 'text-xl font-display font-bold',
 };
 
-const Title = ({ level = 2, className = '', children, ...props }: ITitleProps) => {
-  const Tag = `h${level}` as const;
+const Title = ({
+  level = 2,
+  className = '',
+  children,
+  ...props
+}: TitleProps) => {
+  const Tag = `h${level}` as 'h1' | 'h2' | 'h3';
 
   return (
     <Tag className={`${titleStyles[level]} ${className}`} {...props}>

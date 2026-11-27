@@ -1,12 +1,12 @@
-import { Image } from 'react-image-and-background-image-fade';
+import ImageApp from '../imageApp/ImageApp';
 
-export type direction = 'toRight' | 'toLeft';
+export type Direction = 'toRight' | 'toLeft';
 
 interface IAboutBookItemProps {
   src: string;
   alt: string;
   text: string;
-  direction: direction;
+  direction: Direction;
 }
 
 const AboutBookItems = ({ src, alt, text, direction }: IAboutBookItemProps) => {
@@ -19,17 +19,14 @@ const AboutBookItems = ({ src, alt, text, direction }: IAboutBookItemProps) => {
       <div
         className={`dark-neon-border w-64 shrink-0 self-center overflow-hidden rounded-xl sm:w-60 md:w-80 ${direction === 'toRight' ? '' : 'order-1 sm:order-2'}`}
       >
-        <Image
+        <ImageApp
           src={src}
           alt={alt}
           width={400}
           height={600}
-          fit="cover"
           position="top"
-          placeholder="skeleton"
-          fadeType="zoom-blur"
           className="w-full"
-        />
+        ></ImageApp>
       </div>
       <p
         className={`max-w-200 hyphens-auto ${direction === 'toRight' ? '' : 'order-2 sm:order-1'}`}

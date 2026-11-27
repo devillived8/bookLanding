@@ -11,10 +11,8 @@ import Atmosphera from '../layout/Atmosphera';
 import AboutAuthor from '../layout/AboutAuthor';
 import { Footer } from '../layout/Footer';
 
-
 const App = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
-
 
   const handleToggleMenu = () => {
     setMenuIsOpen((prev) => !prev);
@@ -29,13 +27,13 @@ const App = () => {
 
       <main className="relative z-10">
         <Hero />
-        <div className='max-w-7xl mx-auto  pt-4 pb-4 mt-4 rounded-md'>
-        <InfoSection></InfoSection>
-        <AboutBookSection></AboutBookSection>
-        <WhereFind></WhereFind>
-        <Characters></Characters>
-        <Atmosphera></Atmosphera>
-        <AboutAuthor></AboutAuthor>
+        <div className="mx-auto mt-4 max-w-7xl rounded-md pt-4 pb-4">
+          <InfoSection></InfoSection>
+          <AboutBookSection></AboutBookSection>
+          <WhereFind></WhereFind>
+          <Characters></Characters>
+          <Atmosphera></Atmosphera>
+          <AboutAuthor></AboutAuthor>
         </div>
       </main>
       <Footer></Footer>

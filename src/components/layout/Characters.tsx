@@ -11,36 +11,42 @@ const charactersArr = [
     title: 'Ян Северов',
     img: character1,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
   {
     id: 'character-2',
     title: 'Ян Северов',
     img: character2,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
   {
     id: 'character-3',
     title: 'Ян Северов',
     img: character3,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
   {
     id: 'character-4',
     title: 'Ян Северов',
     img: character1,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
   {
     id: 'character-5',
     title: 'Ян Северов',
     img: character2,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
   {
     id: 'character-6',
     title: 'Ян Северов',
     img: character3,
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloremque.',
+    alt: '',
   },
 ];
 
@@ -52,7 +58,7 @@ const Characters = () => {
       </div>
       <div className="hidden md:grid md:grid-cols-[1fr_1fr_1fr] md:grid-rows-[auto_auto] md:gap-8">
         {charactersArr.map((char) => (
-          <CharacterCard key={char.id} img={char.img} text={char.text} name={char.title} />
+          <CharacterCard key={char.id} img={char.img} text={char.text} name={char.title} alt={char.alt}/>
         ))}
       </div>
     </Section>

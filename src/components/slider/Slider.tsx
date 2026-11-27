@@ -4,8 +4,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Title from '../title/Title';
-import { Image } from 'react-image-and-background-image-fade';
 import { type ReactNode } from 'react';
+import ImageApp from '../imageApp/ImageApp';
 
 interface ISliderItem {
   id: string;
@@ -40,28 +40,23 @@ const Slider = ({ sliderItems, children }: ISliderProps) => {
       loop={true}
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {sliderItems.map((item) => (
         <SwiperSlide key={item.id} className="pb-10">
-          <div className='bg-bg-surface'>
-            <Image
-            src={item.img}
-            alt={item.alt ?? item.title}
-            width= '100%'
-            height= 'auto'
-            placeholder="skeleton"
-            fadeType="zoom-blur"
-            fit="cover"
-            position="top"
-            className="max-h-120 w-full"
-            />
+          <div className="bg-bg-surface">
+            <ImageApp
+              src={item.img}
+              alt={item.alt ?? item.title}
+              position="top"
+              width="100%"
+              height="auto"
+              className="max-h-120 w-full"
+            ></ImageApp>
             <Title level={3} className="p-4 pb-0 text-center">
               {item.title}
             </Title>
             <p className="p-4 hyphens-auto">{item.text}</p>
-            {children?.(item)} 
+            {children?.(item)}
           </div>
         </SwiperSlide>
       ))}

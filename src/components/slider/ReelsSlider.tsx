@@ -58,7 +58,6 @@ const ReelsSlider = ({
               className="aspect-[363/714] w-full max-w-[363px] rounded-md border-0"
               src={item.src}
               allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-              allowFullScreen
               loading="lazy"
               title={item.title ?? 'Видеоклип'}
             />

@@ -74,8 +74,10 @@ const AboutBookSection = () => {
         ))}
 
         <div className="bg-bg-surface border-border-component flex w-full flex-col items-center justify-center rounded-md border p-4 md:p-8">
-          <Title level={3} className='text-center mb-4 md:mb-8'>Заголовок</Title>
-          <p className="max-w-200 hyphens-auto mb-4 md:mb-8">
+          <Title level={3} className="mb-4 text-center md:mb-8">
+            Заголовок
+          </Title>
+          <p className="mb-4 max-w-200 hyphens-auto md:mb-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum ullam fugiat
             rem eius provident, nostrum possimus? Obcaecati, quas animi.
           </p>

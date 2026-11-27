@@ -5,6 +5,7 @@ import OzonIcon from '../../assets/img/ozon-icon.svg?react';
 import LitressIcon from '../../assets/img/litres-icon.svg?react';
 import LitnetIcon from '../../assets/img/litner-icon.svg?react';
 import BookLogo from '../../assets/img/book-logo.png';
+import ImageApp from '../imageApp/ImageApp';
 
 const WhereFind = () => {
   return (
@@ -53,16 +54,16 @@ const WhereFind = () => {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="border-border-component order-1 flex flex-col justify-center rounded-md border p-4 lg:order-2 lg:w-[40%] lg:shrink-0">
           <div className="flex w-full items-center justify-center">
-            <img
+            <ImageApp
               src={BookLogo}
               alt="Картинка книги"
+              loading='lazy'
               className="h-auto w-full max-w-150 object-contain"
-            />
+            ></ImageApp>
           </div>
           <p className="hyphens-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus ratione doloribus

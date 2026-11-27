@@ -9,7 +9,8 @@ const Burger = ({ toggleMenu, isMenuOpen }: IBurgerProps) => {
       onClick={toggleMenu}
       className="relative min-h-6 min-w-10 cursor-pointer md:hidden"
       aria-label="Меню"
-      aria-expanded={isMenuOpen ? true : false}
+      aria-expanded={isMenuOpen}
+      aria-controls="mobile-menu"
     >
       <span
         className={`bg-accent-red absolute left-0 h-0.5 w-full transition-all duration-300 ${

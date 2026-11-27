@@ -25,9 +25,9 @@ const MyAudioPlayer = ({ tracks }: IAudioPlayerProps) => {
   };
 
   return (
-    <div className=" flex w-full flex-col items-center p-2">
+    <div className="flex w-full flex-col items-center p-2">
       <AudioPlayer
-      className='max-w-200 rounded-md border border-border-component bg-bg-secondary! text-'
+        className="border-border-component bg-bg-secondary! text- max-w-200 rounded-md border"
         src={currentTrack.src}
         showSkipControls={true}
         showJumpControls={false}
@@ -36,7 +36,7 @@ const MyAudioPlayer = ({ tracks }: IAudioPlayerProps) => {
         onEnded={handleNext}
         header={`Сейчас играет: ${currentTrack.title}`}
         customIcons={{
-          previous: <span className=''>⏮</span>,
+          previous: <span className="">⏮</span>,
           next: <span>⏭</span>,
         }}
       />
